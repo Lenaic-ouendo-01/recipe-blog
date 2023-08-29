@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+  @apply overflow-hidden rounded-xl border-2;
+}
+
+.full{
+  @apply h-full w-full;
+}
+
+.text-vertical{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.clock-text{
+  @apply ml-2 font-body font-bold text-[8px] sm:text-[10px] text-gray-400;
+}
+
+.time{
+  @apply text-neutral-800 text-[10px] sm:text-sm font-body font-bold;
+}
+
+.ingredient{
+  @apply font-body font-bold text-sm sm:text-base text-neutral-800;
+}
+
+.case{
+  @apply bg-case text-white font-header rounded-[6px] aspect-square font-bold text-2xl w-9 h-9 text-center leading-tight;
+}
+
+.animation-text{
+ animation-duration: 1s;
+ animation-name: liste;
+}
+@keyframes liste {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.animation-menu{
+  animation-duration: 2s;
+  animation-name: menu;
+}
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.animation-image{
+  animation-duration: 1.5s;
+  animation-name: image;
+}
+@keyframes image {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animation-header{
+  animation-duration: 1.5s;
+  animation-name: header;
+}
+@keyframes header {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
